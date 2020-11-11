@@ -25,6 +25,7 @@
     "src/setupTests.js",
     "src/App.test.js",
     "src/reportWebVitals.js",
-    "src/index.js"
+    "src/index.js",
+    "/home/runner/work/calculator/calculator/node_modules/eslint-config-airbnb-base/index.js"
   ]
 }
