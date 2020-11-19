@@ -7,7 +7,7 @@ function Display({ result }) {
   return (
     <header>
       <h1>
-        {`Result: ${result}`}
+        {`Result => ${result}`}
       </h1>
     </header>
   );
