@@ -22,6 +22,10 @@
   },
   "ignorePatterns": [
     "dist/",
-    "build/"
+    "build/",
+    "src/setupTests.js",
+    "src/App.test.js",
+    "src/reportWebVitals.js",
+    "src/index.js"
   ]
 }
