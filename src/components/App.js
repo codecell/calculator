@@ -7,7 +7,7 @@ import Display from './Display';
 function App() {
   return (
     <div className="App-header">
-      <h1>CALCULATOR</h1>
+      <h1 className="header">CALCULATOR PRO</h1>
       <Display />
       <ButtonPanel />
     </div>

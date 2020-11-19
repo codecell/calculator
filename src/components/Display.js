@@ -5,11 +5,11 @@ import PropTypes from 'prop-types';
 
 function Display({ result }) {
   return (
-    <header>
-      <h1>
-        {`Result => ${result}`}
-      </h1>
-    </header>
+    <div className="display-container">
+      <h2>
+        {result}
+      </h2>
+    </div>
   );
 }
 
