@@ -1,53 +1,23 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;  
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Major Mono Display', monospace;
   text-align: center;
-}
-
-body {
-  background:
-    radial-gradient(black 15%, transparent 16%) 0 0,
-    radial-gradient(black 15%, transparent 16%) 8px 8px,
-    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px,
-    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
   background-color: rgba(0, 0, 0, 0.9);
-  background-size: 16px 16px;
-}
-
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
 }
 
 .container {
   max-width: 700px;
   min-height: 100vh;
   margin: 0 auto;
-  box-shadow: 0px 2px 10px #858694;
+  box-shadow: 0 2px 10px #858694;
   background-color: #c5c2c2;
 }
 
@@ -59,24 +29,27 @@ code {
 
 /* Common */
 .buttons-wrapper,
-.display-container, .button {
+.display-container,
+.button {
   display: flex;
 }
 
-.display-container, .button {
+.display-container,
+.button {
   height: 6.25rem;
+  border-radius: 5px;
 }
 
 /* Display */
 .display-container {
   width: 100%;
-  color: #fff;  
+  color: #fff;
   justify-content: flex-end;
   align-items: center;
   padding: 1.5rem;
   font-size: 2rem;
   font-weight: 400;
-  border: 2px solid #DBDBDB;
+  border: 2px solid #dbdbdb;
   background:
     radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 16%) 0 0,
     radial-gradient(black 15%, transparent 16%) 8px 8px,
@@ -86,25 +59,16 @@ code {
   background-size: 16px 16px;
 }
 
-/* buttons panel */
-.buttons-wrapper {
-/*  */
-}
-
-.display-container, .button {
-  border-radius: 5px;
-}
-
 /* button */
 .button {
-  background-color: #E0E0E0;
+  background-color: #e0e0e0;
   flex: 1;
   justify-content: center;
   align-items: center;
-  font-size:  1.3rem;
+  font-size: 1.3rem;
   font-weight: bold;
   transition: 250ms;
-  border: solid 2px #D1D1D1;
+  border: solid 2px #d1d1d1;
 }
 
 .button:focus {
@@ -112,13 +76,13 @@ code {
 }
 
 .Zero-button {
-  flex: 2
+  flex: 2;
 }
 
 .khakiBg {
-  background-color: #F5913E;
-  border: solid 1px #F5913E;
-  border-top: solid 2px #D8D8D8;
+  background-color: #f5913e;
+  border: solid 1px #f5913e;
+  border-top: solid 2px #d8d8d8;
 }
 
 .button:hover {
@@ -128,4 +92,3 @@ code {
 .khakiBg:hover {
   background-color: #e07620;
 }
-
