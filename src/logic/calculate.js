@@ -3,7 +3,11 @@
 import operate from './operate';
 
 const calculate = (data, buttonName) => {
-  let { total, next, operation } = data;
+  const mutatedData = {
+    total: data.total,
+    next: data.next,
+    operation: data.operation,
+  };
 
   switch (buttonName) {
     case '0':
@@ -16,61 +20,61 @@ const calculate = (data, buttonName) => {
     case '7':
     case '8':
     case '9':
-      if (next === null) {
-        next = buttonName;
+      if (mutatedData.next === null) {
+        mutatedData.next = buttonName;
       } else {
-        next += buttonName;
+        mutatedData.next += buttonName;
       }
       break;
     case '+':
     case '-':
     case 'x':
     case '÷':
-      if (total === null) {
+      if (mutatedData.total === null) {
         /**
          * At this point the numbers
          */
-        total = next;
+        mutatedData.total = mutatedData.next;
       } else {
-        total = operate(next, total, operation);
+        mutatedData.total = operate(mutatedData.next, mutatedData.total, mutatedData.operation);
       }
 
-      next = null;
-      operation = buttonName;
+      mutatedData.next = null;
+      mutatedData.operation = buttonName;
       break;
     case '.':
-      if (next === null) {
-        next = '.';
-      } else if (!next.includes('.')) {
-        next += buttonName;
+      if (mutatedData.next === null) {
+        mutatedData.next = '.';
+      } else if (!mutatedData.next.includes('.')) {
+        mutatedData.next += buttonName;
       }
       break;
     case '%':
     case '+/-':
-      next = operate(next, total, buttonName);
+      mutatedData.next = operate(mutatedData.next, mutatedData.total, buttonName);
       break;
     case '=':
-      next = operate(next, total, operation);
-      total = null;
-      operation = null;
+      mutatedData.next = operate(mutatedData.next, mutatedData.total, mutatedData.operation);
+      mutatedData.total = null;
+      mutatedData.operation = null;
       break;
     case 'AC':
-      next = null;
-      total = null;
-      operation = null;
+      mutatedData.next = null;
+      mutatedData.total = null;
+      mutatedData.operation = null;
       break;
     default:
-      if (total === null) {
-        total = next;
+      if (mutatedData.total === null) {
+        mutatedData.total = mutatedData.next;
       } else {
-        total = operate(next, total, '+');
+        mutatedData.total = operate(mutatedData.next, mutatedData.total, '+');
       }
-      next = null;
-      operation = buttonName;
+      mutatedData.next = null;
+      mutatedData.operation = buttonName;
       break;
   }
 
-  return data;
+  return mutatedData;
 };
 
 export default calculate;
