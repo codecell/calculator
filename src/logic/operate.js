@@ -28,7 +28,7 @@ const operate = (numberOne, numberTwo, operation) => {
       result = inputB.div(inputA);
       break;
     case '%':
-      result = inputB.div(100);
+      result = inputA.div(100);
       break;
     case '+/-':
       result = inputA.times(-1);
